@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A401AE56202AE6E200DCE22D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A401AE55202AE6E200DCE22D /* CoreAudio.framework */; };
+		A401AE58202AE6E800DCE22D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A401AE57202AE6E700DCE22D /* AVFoundation.framework */; };
+		A401AE5A202AE6F200DCE22D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A401AE59202AE6F200DCE22D /* UIKit.framework */; };
+		A4A498A020444B9100B75285 /* CassAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4988D20444B9100B75285 /* CassAudioRecorder.m */; };
+		A4A498A120444B9100B75285 /* RecorderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A4988F20444B9100B75285 /* RecorderManager.m */; };
+		A4A498A220444B9100B75285 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4A4989320444B9100B75285 /* amrFileCodec.mm */; };
+		A4A498A320444B9100B75285 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A4989520444B9100B75285 /* libopencore-amrnb.a */; };
+		A4A498A420444B9100B75285 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A4989620444B9100B75285 /* libopencore-amrwb.a */; };
+		A4A498A520444B9100B75285 /* VoiceConvert.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4A4989F20444B9100B75285 /* VoiceConvert.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A401AE31202AE3F600DCE22D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A401AE33202AE3F600DCE22D /* libCassRecordManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCassRecordManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A401AE55202AE6E200DCE22D /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A401AE57202AE6E700DCE22D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A401AE59202AE6F200DCE22D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A4A4988C20444B9100B75285 /* CassAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CassAudioRecorder.h; sourceTree = "<group>"; };
+		A4A4988D20444B9100B75285 /* CassAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CassAudioRecorder.m; sourceTree = "<group>"; };
+		A4A4988E20444B9100B75285 /* RecorderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderManager.h; sourceTree = "<group>"; };
+		A4A4988F20444B9100B75285 /* RecorderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderManager.m; sourceTree = "<group>"; };
+		A4A4989220444B9100B75285 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		A4A4989320444B9100B75285 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		A4A4989520444B9100B75285 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		A4A4989620444B9100B75285 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		A4A4989820444B9100B75285 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		A4A4989920444B9100B75285 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		A4A4989B20444B9100B75285 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		A4A4989C20444B9100B75285 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		A4A4989E20444B9100B75285 /* VoiceConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceConvert.h; sourceTree = "<group>"; };
+		A4A4989F20444B9100B75285 /* VoiceConvert.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VoiceConvert.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A401AE30202AE3F600DCE22D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A401AE5A202AE6F200DCE22D /* UIKit.framework in Frameworks */,
+				A4A498A420444B9100B75285 /* libopencore-amrwb.a in Frameworks */,
+				A4A498A320444B9100B75285 /* libopencore-amrnb.a in Frameworks */,
+				A401AE58202AE6E800DCE22D /* AVFoundation.framework in Frameworks */,
+				A401AE56202AE6E200DCE22D /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A401AE2A202AE3F600DCE22D = {
+			isa = PBXGroup;
+			children = (
+				A4A4988B20444B9100B75285 /* CassRecordManagerment */,
+				A401AE34202AE3F600DCE22D /* Products */,
+				A401AE52202AE61000DCE22D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A401AE34202AE3F600DCE22D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A401AE33202AE3F600DCE22D /* libCassRecordManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A401AE52202AE61000DCE22D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A401AE59202AE6F200DCE22D /* UIKit.framework */,
+				A401AE57202AE6E700DCE22D /* AVFoundation.framework */,
+				A401AE55202AE6E200DCE22D /* CoreAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4A4988B20444B9100B75285 /* CassRecordManagerment */ = {
+			isa = PBXGroup;
+			children = (
+				A4A4988C20444B9100B75285 /* CassAudioRecorder.h */,
+				A4A4988D20444B9100B75285 /* CassAudioRecorder.m */,
+				A4A4988E20444B9100B75285 /* RecorderManager.h */,
+				A4A4988F20444B9100B75285 /* RecorderManager.m */,
+				A4A4989020444B9100B75285 /* VoiceConvert */,
+			);
+			path = CassRecordManagerment;
+			sourceTree = "<group>";
+		};
+		A4A4989020444B9100B75285 /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				A4A4989120444B9100B75285 /* amrwapper */,
+				A4A4989420444B9100B75285 /* lib */,
+				A4A4989720444B9100B75285 /* opencore-amrnb */,
+				A4A4989A20444B9100B75285 /* opencore-amrwb */,
+				A4A4989D20444B9100B75285 /* VoiceConVerter */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		A4A4989120444B9100B75285 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				A4A4989220444B9100B75285 /* amrFileCodec.h */,
+				A4A4989320444B9100B75285 /* amrFileCodec.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		A4A4989420444B9100B75285 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A4A4989520444B9100B75285 /* libopencore-amrnb.a */,
+				A4A4989620444B9100B75285 /* libopencore-amrwb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A4A4989720444B9100B75285 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				A4A4989820444B9100B75285 /* interf_dec.h */,
+				A4A4989920444B9100B75285 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		A4A4989A20444B9100B75285 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				A4A4989B20444B9100B75285 /* dec_if.h */,
+				A4A4989C20444B9100B75285 /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		A4A4989D20444B9100B75285 /* VoiceConVerter */ = {
+			isa = PBXGroup;
+			children = (
+				A4A4989E20444B9100B75285 /* VoiceConvert.h */,
+				A4A4989F20444B9100B75285 /* VoiceConvert.mm */,
+			);
+			path = VoiceConVerter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A401AE32202AE3F600DCE22D /* CassRecordManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A401AE3C202AE3F600DCE22D /* Build configuration list for PBXNativeTarget "CassRecordManager" */;
+			buildPhases = (
+				A401AE2F202AE3F600DCE22D /* Sources */,
+				A401AE30202AE3F600DCE22D /* Frameworks */,
+				A401AE31202AE3F600DCE22D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CassRecordManager;
+			productName = CassRecordManager;
+			productReference = A401AE33202AE3F600DCE22D /* libCassRecordManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A401AE2B202AE3F600DCE22D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "谢志敏";
+				TargetAttributes = {
+					A401AE32202AE3F600DCE22D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A401AE2E202AE3F600DCE22D /* Build configuration list for PBXProject "CassRecordManager" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A401AE2A202AE3F600DCE22D;
+			productRefGroup = A401AE34202AE3F600DCE22D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A401AE32202AE3F600DCE22D /* CassRecordManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A401AE2F202AE3F600DCE22D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A498A220444B9100B75285 /* amrFileCodec.mm in Sources */,
+				A4A498A020444B9100B75285 /* CassAudioRecorder.m in Sources */,
+				A4A498A520444B9100B75285 /* VoiceConvert.mm in Sources */,
+				A4A498A120444B9100B75285 /* RecorderManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A401AE3A202AE3F600DCE22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A401AE3B202AE3F600DCE22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A401AE3D202AE3F600DCE22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CassRecordManager/VoiceConvert/lib",
+					"$(PROJECT_DIR)/CassRecordManagerment/VoiceConvert/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A401AE3E202AE3F600DCE22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CassRecordManager/VoiceConvert/lib",
+					"$(PROJECT_DIR)/CassRecordManagerment/VoiceConvert/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A401AE2E202AE3F600DCE22D /* Build configuration list for PBXProject "CassRecordManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A401AE3A202AE3F600DCE22D /* Debug */,
+				A401AE3B202AE3F600DCE22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A401AE3C202AE3F600DCE22D /* Build configuration list for PBXNativeTarget "CassRecordManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A401AE3D202AE3F600DCE22D /* Debug */,
+				A401AE3E202AE3F600DCE22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A401AE2B202AE3F600DCE22D /* Project object */;
+}
